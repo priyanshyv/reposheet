@@ -22,7 +22,7 @@ passport.use(
 		{
 			clientID: process.env.GITHUB_CLIENT_ID,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET,
-			callbackURL: "/api/auth/github/callback",
+			callbackURL: "https://reposheet.onrender.com/api/auth/github/callback",
 		},
 		 //signup the user or login the user
 		async function (accessToken, refreshToken, profile, done) {
