@@ -1,6 +1,8 @@
-const SortRepos = ({onSort,sortType}) => {
-	
+import { useNavigate } from "react-router-dom";
 
+
+const SortRepos = ({onSort,sortType}) => {
+	const navigate = useNavigate();
 	return (
 		<div className='mb-2 flex justify-center lg:justify-end'>
 			<button
@@ -26,6 +28,13 @@ const SortRepos = ({onSort,sortType}) => {
 				onClick={()=>onSort("forks")}
 			>
 				Most Forks
+			</button>
+			<button
+				type='button'
+				className={`py-2.5 px-5 me-2 mb-2  text-xs sm:text-sm font-medium focus:outline-none rounded-lg bg-glass`}
+				onClick={() => navigate("/git-server")}
+			>
+				My Own Git Server
 			</button>
 		</div>
 	);

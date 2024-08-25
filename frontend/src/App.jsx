@@ -9,6 +9,7 @@ import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { useAuthContext } from './context/AuthContext'
+import MyOwnGit from './components/MyOwnGit'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 					<Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to={"/"} />} />
 					<Route path='/explore' element={authUser ? <ExplorePage /> : <Navigate to={"/login"} />} />
 					<Route path='/likes' element={authUser ? <LikesPage /> : <Navigate to={"/login"} />} />
+					<Route path='/git-server' element={<MyOwnGit />} />
 				</Routes>
 				<Toaster />
 			</div>

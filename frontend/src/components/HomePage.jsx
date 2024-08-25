@@ -99,6 +99,9 @@ const HomePage = () => {
           {!loading && <Repos repos={repos} />}
           {loading && <Spinner />}
         </div>
+        <div>
+          <button>MY OWN GITSERVER</button>
+        </div>
       </div>
     );
   };
