@@ -26,7 +26,7 @@ function App() {
 					<Route path='/signup' element={!authUser ? <SignUpPage /> : <Navigate to={"/"} />} />
 					<Route path='/explore' element={authUser ? <ExplorePage /> : <Navigate to={"/login"} />} />
 					<Route path='/likes' element={authUser ? <LikesPage /> : <Navigate to={"/login"} />} />
-					<Route path='/git-server' element={<MyOwnGit />} />
+					<Route path='/git-server' element={<MyOwnGit/>} />
 				</Routes>
 				<Toaster />
 			</div>

@@ -47,28 +47,29 @@ const MyOwnGit = () => {
         <p>This command will open a secure connection to your server, allowing you to begin configuring your Git server on AWS.</p>
         <br /><br />
       <h1 className="text-2xl font-bold mb-4">Setting Up a Git Server on Ubuntu</h1>
-
+      <br /><br />
       <h2 className="text-xl font-semibold mb-2">1. Configure Security Group</h2>
       <p className="mb-4">
         Go to your cloud provider's security group settings and add a rule to allow incoming traffic on TCP port 
         <code>1234</code> from anywhere (both <code>IPv4</code> and <code>IPv6</code>).
       </p>
-
+      <br /><br />
       <h2 className="text-xl font-semibold mb-2">2. Create a Git User</h2>
       <p className="mb-4">
         Run the following commands to create a new user and switch to that user:
       </p>
       <Copycode inputText="sudo adduser git" />
       <Copycode inputText="sudo su git" />
-
+      <br /><br />
       <h2 className="text-xl font-semibold mb-2">3. Install Required Software</h2>
       <p className="mb-4">
         Install Ruby and GitWeb using these commands:
       </p>
       <Copycode inputText="sudo apt install ruby" />
       <Copycode inputText="sudo apt install gitweb" />
+      <br /><br />
 
-      <h2 className="text-xl font-semibold mb-2">4. Set Up SSH Access</h2>
+      <h2 className="text-xl font-semibold mb-2">4. <a className="text-blue-500 underline" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Set Up SSH Access</a></h2>
       <p className="mb-4">
         Configure SSH access by following these steps:
       </p>
@@ -81,20 +82,23 @@ const MyOwnGit = () => {
           <p>Paste your SSH key into the file, then save and exit with <code>:wq</code>.</p>
         </li>
       </ol>
-
+      <br /><br />
       <h2 className="text-xl font-semibold mb-2">5. Create and Initialize the Git Repository</h2>
       <p className="mb-4">
         Run the following commands to create a new Git repository and set permissions:
       </p>
       <ol className="list-decimal list-inside mb-4">
         <li>Create the repository directory:
+        <br />
           <Copycode inputText="cd /var/lib/git/" />
           <Copycode inputText="mkdir abc.git" />
         </li>
         <li>Change the ownership of the directory:
+        <br />
           <Copycode inputText="sudo chown -R git:git /var/lib/git" />
         </li>
         <li>Initialize the repository:
+        <br />
           <Copycode inputText="cd /var/lib/git/abc.git" />
           <Copycode inputText="git init --bare" />
         </li>
@@ -103,7 +107,7 @@ const MyOwnGit = () => {
       <p className="mb-4">Your Git server is now set up and ready to use. Enjoy!</p>
         <br /><br />
         <h1 className="text-2xl font-bold mb-4">Setting Up Your Git Server</h1>
-      
+        <br /><br />
       <p className="mb-4">
         Don't worry! By following the instructions and using the provided code, setting up your Git server will be straightforward. After completing all the steps, refer to the image below to see where you need to change the URL.
       </p>
@@ -115,7 +119,7 @@ const MyOwnGit = () => {
       </p>
       
       <a 
-        href="http://13.233.155.204:1234" 
+        href="http://(your public instance IP address):1234" 
         className="bg-blue-500 text-white p-2 rounded" 
         target="_blank" 
         rel="noopener noreferrer"
