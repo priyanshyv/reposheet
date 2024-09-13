@@ -3,7 +3,11 @@
 Welcome to the Reposheet project! This application allows you to manage and interact with GitHub user profiles and repositories using a modern tech stack.
 [Live Demo](https://reposheet.onrender.com/)
 
-![Uploading Screenshot 2024-08-26 at 7.13.15 AM.png…]()
+
+
+
+<img width="1695" alt="Screenshot 2024-09-13 at 2 47 41 PM" src="https://github.com/user-attachments/assets/6a5d772c-73a0-4e06-8012-01e443a6b40a">
+
 
 [Video Youtube](https://youtu.be/AROVBbZM3A0)
 
